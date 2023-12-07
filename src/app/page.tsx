@@ -1,3 +1,6 @@
+import Header from "@/components/header/header";
+import Swiper from "@/components/swiper/swiper";
+
 export default function Home() {
-  return <h1>hello world</h1>;
+  return <Swiper />;
 }
