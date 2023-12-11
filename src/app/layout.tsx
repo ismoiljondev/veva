@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,18 @@ export default function RootLayout({
           <Header />
         </header>
         <main>{children}</main>
-        <footer></footer>
+        <footer className="fixed w-full bottom-0 bg-white">
+          <Footer
+            key={1}
+            desc={`Договор оферты \t
+            Сертификаты`}
+            text={`VEVA © \n Все права защищены. 2023`}
+            phone="Телефон:"
+            phoneNumber="+998 55 519 90 90"
+            call="Заказать через "
+            withs="телеграмм бот"
+          />
+        </footer>
       </body>
     </html>
   );

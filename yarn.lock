@@ -2263,6 +2263,11 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
+"swiper@^11.0.5":
+  "integrity" "sha512-rhCwupqSyRnWrtNzWzemnBLMoyYuoDgGgspAm/8iBD3jCvAWycPLH4Z3TB0O5520DHLzMx94yUMH/B9Efpa48w=="
+  "resolved" "https://registry.npmjs.org/swiper/-/swiper-11.0.5.tgz"
+  "version" "11.0.5"
+
 "tailwindcss@^3.3.6":
   "integrity" "sha512-AKjF7qbbLvLaPieoKeTjG1+FyNZT6KaJMJPFeQyLfIp7l82ggH1fbHJSsYIvnbTFQOlkh+gBYpyby5GT1LIdLw=="
   "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.3.6.tgz"
