@@ -19,21 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="bg-[#E4EAF3]">
+        <header className="bg-[#E4EAF3] h-[100px]">
           <Header />
         </header>
         <main>{children}</main>
         <footer className="fixed w-full bottom-0 bg-white">
-          <Footer
-            key={1}
-            desc={`Договор оферты \t
-            Сертификаты`}
-            text={`VEVA © \n Все права защищены. 2023`}
-            phone="Телефон:"
-            phoneNumber="+998 55 519 90 90"
-            call="Заказать через "
-            withs="телеграмм бот"
-          />
+          <Footer />
         </footer>
       </body>
     </html>

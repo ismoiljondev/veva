@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 const links = [
   { link: "/", label: "Features" },
-  { link: "/pricing", label: "Pricing" },
+  { link: "/market", label: "Pricing" },
 ];
 
 const Header: React.FC = () => {

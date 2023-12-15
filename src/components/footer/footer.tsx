@@ -14,14 +14,7 @@ type footerProps = {
   withs: string;
 };
 
-const Footer: React.FC<footerProps> = ({
-  text,
-  desc,
-  phoneNumber,
-  phone,
-  call,
-  withs,
-}: footerProps) => {
+const Footer: React.FC = () => {
   return (
     <div className="pb-[30px]">
       <Container>
@@ -40,8 +33,10 @@ const Footer: React.FC<footerProps> = ({
               />
             </svg>
             <div>
-              <p className="text-[12px] text-white">{call}</p>
-              <h2 className="text-[14px] font-bold text-white">{withs}</h2>
+              <p className="text-[12px] text-white">Заказать через</p>
+              <h2 className="text-[14px] font-bold text-white">
+                телеграмм бот
+              </h2>
             </div>
           </div>
         </Link>
@@ -50,8 +45,14 @@ const Footer: React.FC<footerProps> = ({
             <div className="max-xl:hidden">
               <Logo />
             </div>
-            <p className="break-all">{text}</p>
-            <p>{desc}</p>
+            <div>
+              <p>VEVA © </p>
+              <p> Все права защищены. 2023</p>
+            </div>
+            <div>
+              <p className="underline">Договор оферты</p>
+              <p className="underline">Сертификаты</p>
+            </div>
           </div>
           <div className="flex justify-between items-center max-xl:flex-col-reverse max-xl:place-items-end gap-[10px]">
             <div className="flex gap-2 items-center">
@@ -80,15 +81,15 @@ const Footer: React.FC<footerProps> = ({
                     />
                   </svg>
                   <div>
-                    <p className="text-[12px]">{call}</p>
-                    <h2 className="text-[14px] font-bold">{withs}</h2>
+                    <p className="text-[12px]">Заказать через</p>
+                    <h2 className="text-[14px] font-bold">телеграмм бот</h2>
                   </div>
                 </div>
               </Link>
             </div>
             <div>
-              <p className="text-right">{phone}</p>
-              <h2 className="font-bold text-[18px]">{phoneNumber}</h2>
+              <p className="text-right">Телефон:</p>
+              <h2 className="font-bold text-[18px]">+998 55 519 90 90</h2>
             </div>
           </div>
         </div>
