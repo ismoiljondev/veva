@@ -13,7 +13,6 @@ const MarketPage: React.FC = () => {
   }
   return (
     <>
-      {/* <Image src={navbar} alt="some" className="fixed top-[80px]" /> */}
       <Container>
         <div className="flex flex-col gap-[30px] mt-5">
           <h1 className="text-3xl font-bold">Магазин товаров</h1>
