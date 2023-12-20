@@ -20,8 +20,8 @@ const Card: React.FC<cardProps> = ({
 }: cardProps) => {
   const [count, setCount] = useState(1);
   return (
-    <div className="flex flex-col gap-[15px] p-[20px] hover:bg-white hover:shadow-[0px_20px_20px_0px_rgba(0,0,0,0.20)] w-[300px] rounded-[10px] group relative mix-blend-luminosity bg-white opacity-20 hover:opacity-100">
-      <div className="flex justify-center bg-blend-darken ">
+    <div className="flex flex-col gap-[15px] p-[20px] hover:bg-white hover:shadow-[0px_20px_20px_0px_rgba(0,0,0,0.20)] w-[300px] rounded-[10px] group relative z-50  bg-white mix-blend-luminosity  opacity-20 hover:opacity-100">
+      <div className="flex justify-center">
         <Image
           src={image}
           alt="image"
@@ -29,11 +29,9 @@ const Card: React.FC<cardProps> = ({
         />
       </div>
       <div className="flex flex-col gap-[20px]">
-        <div className="flex flex-col text-center mix-blend-luminosity">
+        <div className="flex flex-col text-center ">
           <p className="text-sm ">{text}</p>
-          <h2 className="text-2xl text-black font-bold mix-blend-luminosity">
-            {litr}
-          </h2>
+          <h2 className="text-2xl text-black font-bold">{litr}</h2>
         </div>
         <div className="hidden items-center justify-between group-hover:flex">
           <div className="flex gap-[10px] rounded-[10px] bg-[#F2F4F7] p-[14px]">
@@ -47,7 +45,7 @@ const Card: React.FC<cardProps> = ({
           </div>
           <div className="flex-col">
             <p className="text-xs">{sum}</p>
-            <p className="text-2xl font-bold text-[#1CBBEE] group-hover:mix-blend-normal">
+            <p className="text-2xl font-bold text-[#1CBBEE]">
               {18000 * count} сум
             </p>
           </div>

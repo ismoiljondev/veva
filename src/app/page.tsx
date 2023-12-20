@@ -1,12 +1,10 @@
-import AboutCard from "@/components/about/about";
-import Card from "@/components/card/card";
 import Container from "@/components/container/container";
-import Header from "@/components/header/header";
-import Swiper from "@/components/swiper/swiper";
+import Modal from "@/components/modal/modal";
+import { useState } from "react";
 export default function Home() {
   return (
     <Container>
-      <h1>Hello world</h1>
+      <h1>modal</h1>
     </Container>
   );
 }

@@ -5,6 +5,7 @@ import Map from "../map/map";
 import closeBtn from "../../images/close.png";
 import Image from "next/image";
 import { useState } from "react";
+import Modal from "../modal/modal";
 const links = [
   { link: "/", label: "Features" },
   { link: "/market", label: "Pricing" },
@@ -12,7 +13,7 @@ const links = [
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
-
+  const [show, setShow] = useState(false);
   return (
     <Container>
       <div className="flex justify-between py-[20px] items-center max-2xl:py-[30px] max-md:py-[10px]">
@@ -72,7 +73,10 @@ const Header: React.FC = () => {
             <option value="ru">RU</option>
             <option value="eng">eng</option>
           </select>
-          <button className="py-[9px] px-[18px] rounded-r-[50px] bg-white flex gap-[8px] max-sm:rounded-l-[50px] max-sm:px-[9px]">
+          <button
+            className="py-[9px] px-[18px] rounded-r-[50px] bg-white flex gap-[8px] max-sm:rounded-l-[50px] max-sm:px-[9px]"
+            onClick={() => setShow(true)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -89,6 +93,7 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
+      <Modal isVisible={show} onClose={()=> setShow(false)}/>
     </Container>
   );
 };
