@@ -1,24 +1,19 @@
 "use client";
-import Card from "@/components/card/card";
 import Container from "@/components/container/container";
 import React, { useState } from "react";
-import water from "@/images/water.png";
-import Image from "next/image";
-import navbar from "@/images/Vector.png";
 import Product from "@/components/product/product";
 const MarketPage: React.FC = () => {
   const [item, setItem] = useState(1);
-
   function setToggle(id: number) {
     setItem(id);
   }
   return (
     <>
       <Container>
-        <div className="flex flex-col gap-[30px] mt-5">
+        <div className="flex flex-col gap-[30px] mt-5 mb-[80px]">
           <h1 className="text-3xl font-bold">Магазин товаров</h1>
           <div className="flex flex-col gap-[30px]">
-            <div className="flex border-[#98A2B3] border-b">
+            <div className="flex border-[#98A2B3] border-b overflow-x-scroll">
               <button
                 className="px-[24px] py-[14px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
                 onClick={() => setToggle(1)}
@@ -44,7 +39,7 @@ const MarketPage: React.FC = () => {
                 Оповещения
               </button>
             </div>
-            <div className={item === 1 ? "block" : "hidden"}>
+            <div className={item === 1 ? "flex justify-between" : "hidden"}>
               <Product />
             </div>
             <div className={item === 2 ? "block" : "hidden"}>item2</div>

@@ -1984,10 +1984,10 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react@^16.8.0 || ^17 || ^18", "react@^18", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0":
-  "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
-  "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
-  "version" "18.2.0"
+"react@^16.8.0 || ^17 || ^18", "react@^18.2.0", "react@^18.3.0-next-c8369527e-20230420", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0":
+  "integrity" "sha512-lKvCNWRO9XPy8q7hLd0ODK/4Oqr54r3Vr49Y7EyNBz/kfsmNT6Vx0F69KRz/eGcbt1XDvtbA7KZd+mh8w3wONQ=="
+  "resolved" "https://registry.npmjs.org/react/-/react-18.3.0-next-fecc288b7-20221025.tgz"
+  "version" "18.3.0-next-fecc288b7-20221025"
   dependencies:
     "loose-envify" "^1.1.0"
 
