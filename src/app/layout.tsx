@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="bg-[#E4EAF3] fixed w-full top-0 z-10">
+        <header className="bg-[#E4EAF3] fixed w-full top-0 z-50">
           <Header />
         </header>
         <main>{children}</main>

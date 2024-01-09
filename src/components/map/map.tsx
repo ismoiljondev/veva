@@ -6,8 +6,8 @@ type mapProps = {
 };
 const Map: React.FC<mapProps> = ({ location }: mapProps) => {
   return (
-    <div className="flex max-sm:fixed max-sm:top-[85px] max-sm:w-[100%]">
-      <button className="px-[18px] py-[9px] bg-white rounded-[10px] flex gap-[8px]">
+    <div className="flex max-sm:fixed max-sm:top-[85px] max-sm:w-full">
+      <button className="px-[18px] py-[9px] bg-white rounded-[10px] flex gap-[8px] w-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"

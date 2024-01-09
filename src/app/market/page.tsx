@@ -17,7 +17,7 @@ const MarketPage: React.FC = () => {
         <div className="flex flex-col gap-[30px] mt-5">
           <h1 className="text-3xl font-bold">Магазин товаров</h1>
           <div className="flex flex-col gap-[30px]">
-            <div className="flex border-[#98A2B3] border-b">
+            <div className="flex border-[#98A2B3] border-b max-sm:flex-col">
               <button
                 className="px-[24px] py-[14px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
                 onClick={() => setToggle(1)}

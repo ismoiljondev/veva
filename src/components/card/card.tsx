@@ -20,7 +20,7 @@ const Card: React.FC<cardProps> = ({
 }: cardProps) => {
   const [count, setCount] = useState(1);
   return (
-    <div className="flex flex-col gap-[15px] p-[20px] hover:bg-white hover:shadow-[0px_20px_20px_0px_rgba(0,0,0,0.20)] w-[300px] rounded-[10px] group relative z-50  bg-white mix-blend-luminosity  opacity-20 hover:opacity-100">
+    <div className="flex flex-col gap-[15px] p-[20px] hover:bg-white hover:shadow-[0px_20px_20px_0px_rgba(0,0,0,0.20)] w-[300px] rounded-[10px] group relative z-10  bg-white mix-blend-luminosity  opacity-20 hover:opacity-100">
       <div className="flex justify-center">
         <Image
           src={image}

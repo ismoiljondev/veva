@@ -93,7 +93,7 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
-      <Modal isVisible={show} onClose={()=> setShow(false)}/>
+      <Modal isVisible={show} onClose={() => setShow(false)} />
     </Container>
   );
 };
