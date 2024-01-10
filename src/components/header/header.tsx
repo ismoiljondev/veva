@@ -45,7 +45,6 @@ const Header: React.FC = () => {
               className="hidden max-lg:block"
               onClick={() => {
                 setOpen(!open);
-                console.log("hello");
               }}
             >
               <Image src={closeBtn} alt="close" />

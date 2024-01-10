@@ -1,11 +1,14 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
 import Image from "next/image";
 import cars from "@/images/cars.svg";
+import InfoModal from "../infoModal/infoModal";
 const Swipers: React.FC = () => {
+  const [show, setShow] = useState(false);
   return (
     <>
       <Swiper
@@ -21,7 +24,10 @@ const Swipers: React.FC = () => {
               <h1 className="text-2xl text-white">
                 Круглосуточная доставка <span className="font-bold">24/7</span>
               </h1>
-              <button className="px-[38px] py-[12px] bg-white rounded-full text-[14px] [[font-size:_clamp(2em,5vw,10em)]] max-[450px]:px-4 max-[450px]:py-2 relative z-10">
+              <button
+                onClick={() => setShow(true)}
+                className="px-[38px] py-[12px] bg-white rounded-full text-[14px] [[font-size:_clamp(2em,5vw,10em)]] max-[450px]:px-4 max-[450px]:py-2 relative z-10"
+              >
                 Узнать больше
               </button>
             </div>
@@ -31,6 +37,7 @@ const Swipers: React.FC = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      <InfoModal isVisible={show} onClose={() => setShow(false)} />
     </>
   );
 };

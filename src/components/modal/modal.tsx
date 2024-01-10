@@ -2,27 +2,26 @@
 import Image from "next/image";
 import { useForm, SubmitHandler } from "react-hook-form";
 import close from "@/images/close.svg";
-import { useState } from "react";
 type Inputs = {
   example: string;
   exampleRequired: string;
 };
 
-export default function Modal({ isVisible , onClose}: any) {
-  const [show, setShow] = useState(false)
+export default function Modal({ isVisible, onClose }: any) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-  const handleClose = (e:any)=>{
-    if(e.target.id === "wrapper") onClose();
-  }
+  const handleClose = (e: any) => {
+    if (e.target.id === "wrapper") onClose();
+  };
   if (!isVisible) return null;
   return (
     <div
-      className="w-full h-full fixed z-50 bg-black bg-opacity-50 top-0 left-0 flex flex-col justify-center" id="wrapper"
+      className="w-full h-full fixed z-50 bg-black bg-opacity-50 top-0 left-0 flex flex-col justify-center"
+      id="wrapper"
       onClick={handleClose}
     >
       <div className="flex flex-col bg-white w-[420px] m-auto py-[36px] px-[28px] rounded-[20px] relative max-sm:absolute max-sm:bottom-0 max-sm:w-full max-sm:rounded-b-none">
