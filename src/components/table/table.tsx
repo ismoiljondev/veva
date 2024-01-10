@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import search from "@/images/search.svg";
+import right from "@/images/right.svg";
+import left from "@/images/left.svg";
 const Table: React.FC = () => {
   return (
     <div className="flex flex-col gap-8">
@@ -79,6 +81,27 @@ const Table: React.FC = () => {
           </tr>
         </tbody>
       </table>
+      <div className="flex gap-10 items-center">
+        <Image src={right} alt="right" />
+        <div className="flex">
+          <button className="focus:border focus:border-[#A8A8A8] focus:border-solid px-5 py-3 rounded-full focus:font-bold">
+            1
+          </button>
+          <button className="focus:border focus:border-[#A8A8A8] focus:border-solid px-5 py-3 rounded-full focus:font-bold">
+            2
+          </button>
+          <button className="focus:border focus:border-[#A8A8A8] focus:border-solid px-5 py-3 rounded-full focus:font-bold">
+            3
+          </button>
+          <button className="focus:border focus:border-[#A8A8A8] focus:border-solid px-5 py-3 rounded-full focus:font-bold">
+            ...
+          </button>
+          <button className="focus:border focus:border-[#A8A8A8] focus:border-solid px-5 py-3 rounded-full focus:font-bold">
+            32
+          </button>
+        </div>
+        <Image src={left} alt="left" />
+      </div>
     </div>
   );
 };
