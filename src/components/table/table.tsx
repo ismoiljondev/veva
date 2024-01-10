@@ -15,43 +15,67 @@ const Table: React.FC = () => {
           />
         </div>
       </div>
-      <table className="border-1 border-solid border-[#98A2B3]">
+      <table className="border border-solid border-[#98A2B3] border-t-0 border-x-0">
         <thead>
           <tr>
-            <th className="font-bold text-sm leading-6 ">№</th>
-            <th className="font-bold text-sm leading-6 text-left">
+            <th className="border border-t-0 border-l-0 border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6">
+              №
+            </th>
+            <th className="border border-t-0  border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
               Дата заказа
             </th>
-            <th className="font-bold text-sm leading-6 text-left">
+            <th className="border border-t-0  border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
               Дата доставки
             </th>
-            <th className="font-bold text-sm leading-6 text-left">
+            <th className="border border-t-0  border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
               Статус доставки
             </th>
-            <th className="font-bold text-sm leading-6 text-left">
+            <th className="border border-t-0  border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
               Вид товара
             </th>
-            <th className="font-bold text-sm leading-6 text-left">Кол-во</th>
-            <th className="font-bold text-sm leading-6 text-left">
+            <th className="border border-t-0  border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
+              Кол-во
+            </th>
+            <th className="border border-t-0  border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
               Стоимость 1 единицы
             </th>
-            <th className="font-bold text-sm leading-6 text-left">
+            <th className="border border-t-0  border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
               Сумма к оплате
             </th>
-            <th className="font-bold text-sm leading-6 text-left">Действие</th>
+            <th className="border border-t-0 border-r-0 border-solid border-[#98A2B3] px-2.5 py-5 font-bold text-sm leading-6 text-left">
+              Действие
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Lorem.</td>
-            <td>Nulla.</td>
-            <td>Quasi?</td>
-            <td>Dignissimos.</td>
-            <td>Necessitatibus?</td>
-            <td>Sed.</td>
-            <td>Fugiat.</td>
-            <td>Qui.</td>
-            <td>Eligendi.</td>
+            <td className="border border-l-0 border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Lorem.
+            </td>
+            <td className="border border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Nulla.
+            </td>
+            <td className="border border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Quasi?
+            </td>
+            <td className="border border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Dignissimos.
+            </td>
+            <td className="border border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Necessitatibus?
+            </td>
+            <td className="border border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Sed.
+            </td>
+            <td className="border border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Fugiat.
+            </td>
+            <td className="border border-solid border-[#98A2B3] px-2.5 py-5 ">
+              Qui.
+            </td>
+            <td className="border border-solid border-r-0 border-[#98A2B3] px-2.5 py-5 ">
+              Eligendi.
+            </td>
           </tr>
         </tbody>
       </table>
