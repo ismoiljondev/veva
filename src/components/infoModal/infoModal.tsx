@@ -1,16 +1,7 @@
 "use client";
 import Image from "next/image";
-import { SubmitHandler } from "react-hook-form";
 import close from "@/images/close.svg";
-import { useState } from "react";
-type Inputs = {
-  example: string;
-  exampleRequired: string;
-};
-
 export default function InfoModal({ isVisible, onClose }: any) {
-  const [show, setShow] = useState(false);
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   const handleClose = (e: any) => {
     if (e.target.id === "wrapper") onClose();
   };

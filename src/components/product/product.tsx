@@ -5,8 +5,10 @@ import water from "@/images/water.svg";
 import left from "@/images/left.png";
 import right from "@/images/right.png";
 import Swipers from "../swiper/swiper";
+import DoneModal from "../doneModal/doneModal";
 const Product: React.FC = () => {
   const [count, setCount] = useState(1);
+  const [show, setShow] = useState(false);
   return (
     <div className="flex justify-between w-full gap-10 max-xl:flex-col">
       <div className="flex flex-col gap-[30px]">
@@ -99,7 +101,10 @@ const Product: React.FC = () => {
               </p>
             </div>
             <div className="w-full">
-              <button className="w-full px-[38px] py-3 leading-7 rounded-full bg-black text-white hover:shadow-[0_20px_20px_0_rgba(0,0,0,0.20)]">
+              <button
+                onClick={() => setShow(true)}
+                className="w-full px-[38px] py-3 leading-7 rounded-full bg-black text-white hover:shadow-[0_20px_20px_0_rgba(0,0,0,0.20)]"
+              >
                 Оформить заказ
               </button>
             </div>
@@ -109,6 +114,7 @@ const Product: React.FC = () => {
       <div>
         <Swipers />
       </div>
+      <DoneModal isVisible={show} onClose={() => setShow(false)} />
     </div>
   );
 };
