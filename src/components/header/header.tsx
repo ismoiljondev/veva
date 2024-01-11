@@ -2,7 +2,7 @@
 import Container from "../container/container";
 import Logo from "../logo/logo";
 import Map from "../map/map";
-import closeBtn from "../../images/close.png";
+import closeBtn from "@/images/closeBtn.svg";
 import Image from "next/image";
 import { useState } from "react";
 import Modal from "../modal/modal";

@@ -2,9 +2,8 @@
 import Card from "@/components/card/card";
 import Container from "@/components/container/container";
 import React, { useState } from "react";
-import water from "@/images/water.png";
-import Image from "next/image";
-import navbar from "@/images/Vector.png";
+import water from "@/images/water.svg";
+import Info from "@/components/info/info";
 const MarketPage: React.FC = () => {
   const [item, setItem] = useState(1);
 
@@ -14,7 +13,7 @@ const MarketPage: React.FC = () => {
   return (
     <>
       <Container>
-        <div className="flex flex-col gap-[30px] mt-5">
+        <div className="flex flex-col gap-[30px] mt-40">
           <h1 className="text-3xl font-bold">Магазин товаров</h1>
           <div className="flex flex-col gap-[30px]">
             <div className="flex border-[#98A2B3] border-b max-sm:flex-col">
@@ -46,7 +45,9 @@ const MarketPage: React.FC = () => {
                 cost={0}
               />
             </div>
-            <div className={item === 2 ? "block" : "hidden"}>item2</div>
+            <div className={item === 2 ? "block" : "hidden"}>
+              <Info />
+            </div>
             <div className={item === 3 ? "block" : "hidden"}>item3</div>
           </div>
         </div>

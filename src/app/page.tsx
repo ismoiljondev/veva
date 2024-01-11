@@ -1,8 +1,9 @@
+import AboutCard from "@/components/about/about";
 import Container from "@/components/container/container";
 export default function Home() {
   return (
     <Container>
-      <h1>Hello</h1>
+      <AboutCard desc="hello" title="lorem" key={1}/>
     </Container>
   );
 }
