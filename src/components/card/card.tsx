@@ -34,7 +34,7 @@ const Card: React.FC<cardProps> = ({
           <h2 className="text-2xl text-black font-bold">{litr}</h2>
         </div>
         <div className="hidden items-center justify-between group-hover:flex">
-          <div className="flex gap-[10px] rounded-[10px] bg-[#F2F4F7] p-[14px]">
+          <div className="flex items-center gap-[10px] rounded-[10px] bg-[#F2F4F7] p-[14px]">
             <button onClick={() => setCount((prev) => prev - 1)}>
               <Image src={left} alt="left" />
             </button>

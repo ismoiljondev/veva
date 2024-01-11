@@ -1,16 +1,19 @@
 "use client";
 import Image from "next/image";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import close from "@/images/close.svg";
+import { IMaskInput } from "react-imask";
 type Inputs = {
-  example: string;
-  exampleRequired: string;
+  name: string;
+  phone: string;
+  adress: string;
 };
 
 export default function Modal({ isVisible, onClose }: any) {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
@@ -36,17 +39,29 @@ export default function Modal({ isVisible, onClose }: any) {
             <h2 className="font-bold text-3xl">Регистрация</h2>
             <div className="flex flex-col gap-[15px]">
               <input
-                defaultValue="test"
-                {...register("example")}
+                placeholder="Ваша фамилия и имя"
+                {...register("name")}
                 className="rounded-[10px] bg-[#F2F4F7] py-[14px] px-[15px] text-[18px] text-[#98A2B3] font-light"
               />
-              <input
-                {...register("exampleRequired")}
-                className="rounded-[10px] bg-[#F2F4F7] py-[14px] px-[15px] text-[18px] text-[#98A2B3] font-light"
+
+              <Controller
+                control={control}
+                name="phone"
+                defaultValue=""
+                render={({ field }) => (
+                  <IMaskInput
+                    {...field}
+                    mask="00 000-00-00"
+                    placeholder="00 000-00-00"
+                    className="rounded-[10px] bg-[#F2F4F7] py-[14px] px-[15px] text-[18px] text-[#98A2B3] font-light"
+                  />
+                )}
               />
               <input
-                {...register("exampleRequired")}
+                {...register("adress")}
                 className="rounded-[10px] bg-[#F2F4F7] py-[14px] px-[15px] text-[18px] text-[#98A2B3] font-light"
+                placeholder="Укажите адрес доставки"
+                data-mask
               />
             </div>
             <label htmlFor="check">

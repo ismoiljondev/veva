@@ -13,6 +13,7 @@
     "react": "^18.3.0-next-c8369527e-20230420",
     "react-dom": "^18",
     "react-hook-form": "^7.49.2",
+    "react-imask": "^7.3.0",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

@@ -12,6 +12,14 @@
   "resolved" "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz"
   "version" "5.2.0"
 
+"@babel/runtime-corejs3@^7.23.6":
+  "integrity" "sha512-2ZzmcDugdm0/YQKFVYsXiwUN7USPX8PM7cytpb4PFl87fM+qYPSvTZX//8tyeJB1j0YDmafBJEbl5f8NfLyuKw=="
+  "resolved" "https://registry.npmjs.org/@babel/runtime-corejs3/-/runtime-corejs3-7.23.8.tgz"
+  "version" "7.23.8"
+  dependencies:
+    "core-js-pure" "^3.30.2"
+    "regenerator-runtime" "^0.14.0"
+
 "@babel/runtime@^7.23.2":
   "integrity" "sha512-NdUTHcPe4C99WxPub+K9l9tK5/lV4UXIoaHSYgzco9BCyjKAAwzdBI+wWtYqHt7LJdbo74ZjRPJgzVweq1sz0w=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.23.5.tgz"
@@ -582,6 +590,11 @@
   "integrity" "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg=="
   "resolved" "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   "version" "0.0.1"
+
+"core-js-pure@^3.30.2":
+  "integrity" "sha512-f+eRYmkou59uh7BPcyJ8MC76DiGhspj1KMxVIcF24tzP8NA9HVa1uC7BTW2tgx7E1QVCzDzsgp7kArrzhlz8Ew=="
+  "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.35.0.tgz"
+  "version" "3.35.0"
 
 "create-require@^1.1.0":
   "integrity" "sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ=="
@@ -1284,6 +1297,13 @@
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-5.3.0.tgz"
   "version" "5.3.0"
 
+"imask@^7.3.0":
+  "integrity" "sha512-TG+/rfb62JaQDM2KVrzEHMb4lv2srbsby7vHndXhqgQFB1MgPIXl60VQUfly/Xv5iWfA9ytB+rfQ+skUgINw7A=="
+  "resolved" "https://registry.npmjs.org/imask/-/imask-7.3.0.tgz"
+  "version" "7.3.0"
+  dependencies:
+    "@babel/runtime-corejs3" "^7.23.6"
+
 "import-fresh@^3.2.1":
   "integrity" "sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw=="
   "resolved" "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.0.tgz"
@@ -1979,12 +1999,20 @@
   "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.49.2.tgz"
   "version" "7.49.2"
 
+"react-imask@^7.3.0":
+  "integrity" "sha512-AHoQUeXil6PfqDzJHN08hO2liWxNDRJosNUa2XSqliFY2tXGL/3Elm0msupDNAyNPItAnyF9G5FGFoCfiCn+AQ=="
+  "resolved" "https://registry.npmjs.org/react-imask/-/react-imask-7.3.0.tgz"
+  "version" "7.3.0"
+  dependencies:
+    "imask" "^7.3.0"
+    "prop-types" "^15.8.1"
+
 "react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react@^16.8.0 || ^17 || ^18", "react@^18.2.0", "react@^18.3.0-next-c8369527e-20230420", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0":
+"react@^16.8.0 || ^17 || ^18", "react@^18.2.0", "react@^18.3.0-next-c8369527e-20230420", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=0.14.0":
   "integrity" "sha512-lKvCNWRO9XPy8q7hLd0ODK/4Oqr54r3Vr49Y7EyNBz/kfsmNT6Vx0F69KRz/eGcbt1XDvtbA7KZd+mh8w3wONQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.3.0-next-fecc288b7-20221025.tgz"
   "version" "18.3.0-next-fecc288b7-20221025"
