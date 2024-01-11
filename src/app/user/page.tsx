@@ -92,7 +92,7 @@ const MarketPage: React.FC = () => {
                     <p className="text-lg font-bold">Редактировать</p>
                   </div>
                 </div>
-                <div>
+                <div className="w-[450px] max-sm:w-[400px] max-[450px]:w-[350px] max-[380px]:w-[320px]">
                   <Swipers />
                 </div>
               </div>

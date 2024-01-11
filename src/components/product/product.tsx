@@ -10,8 +10,8 @@ const Product: React.FC = () => {
   const [count, setCount] = useState(1);
   const [show, setShow] = useState(false);
   return (
-    <div className="flex justify-between w-full gap-10 max-xl:flex-col">
-      <div className="flex flex-col gap-[30px]">
+    <div className="flex justify-between w-full gap-24 max-xl:flex-col">
+      <div className="flex flex-col gap-[30px] w-full">
         <h2 className="text-3xl font-bold">Моя корзина</h2>
         <div className="flex flex-col gap-5">
           <div className="flex gap-5 items-center  bg-[#F2F4F7] py-[10px] rounded-[20px] pr-10 max-sm:flex-col max-sm:p-4">
@@ -100,7 +100,7 @@ const Product: React.FC = () => {
                 {count * 15000} сум
               </p>
             </div>
-            <div className="w-full">
+            <div className="max-sm:w-full">
               <button
                 onClick={() => setShow(true)}
                 className="w-full px-[38px] py-3 leading-7 rounded-full bg-black text-white hover:shadow-[0_20px_20px_0_rgba(0,0,0,0.20)]"
@@ -111,7 +111,7 @@ const Product: React.FC = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="w-[450px] max-sm:w-[400px] max-[450px]:w-[350px] max-[380px]:w-[320px]">
         <Swipers />
       </div>
       <DoneModal isVisible={show} onClose={() => setShow(false)} />
