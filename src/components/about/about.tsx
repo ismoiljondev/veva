@@ -7,7 +7,7 @@ type cardProps = {
 const AboutCard: React.FC<cardProps> = ({ desc, title }: cardProps) => {
   return (
     <div className="flex gap-[15px] bg-[#F2F4F7] rounded-[20px] p-[15px] flex-col">
-      <h2>{title}</h2>
+      <h2 className="text-lg font-bold">{title}</h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="126"
@@ -20,7 +20,7 @@ const AboutCard: React.FC<cardProps> = ({ desc, title }: cardProps) => {
           fill="#1CBBEE"
         />
       </svg>
-      <p>{desc}</p>
+      <p className="text-sm">{desc}</p>
     </div>
   );
 };
