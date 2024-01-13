@@ -4,7 +4,7 @@ import bottom from "@/images/top.svg";
 import Image from "next/image";
 const Water: React.FC = () => {
   return (
-    <div className="flex flex-col gap-3.5 w-[270px] h-[390px]">
+    <div className="flex flex-col gap-3.5 w-[270px] h-[390px] max-lg:hidden">
       <div className="w-[270px]">
         <Image src={bottom} alt="bottom" className="w-full" />
       </div>

@@ -6,8 +6,8 @@ type cardProps = {
 };
 const AboutCard: React.FC<cardProps> = ({ desc, title }: cardProps) => {
   return (
-    <div className="flex gap-[15px] bg-[#F2F4F7] rounded-[20px] p-[15px] flex-col">
-      <h2 className="text-lg font-bold">{title}</h2>
+    <div className="flex gap-[15px] bg-[#F2F4F7] rounded-[20px] p-[15px] flex-col max-sm:h-[268px] max-sm:w-[300px]">
+      <h2 className="text-lg font-bold line-clamp-1">{title}</h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="126"

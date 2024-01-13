@@ -6,7 +6,7 @@ import Water from "@/components/water/water";
 export default function Home() {
   return (
     <Container>
-      <div className="flex flex-col gap-14 my-32">
+      <div className="flex flex-col gap-14 my-32 max-sm:gap-8 max-sm:mb-10">
         <div className="max-md:hidden">
           <Swiperx />
         </div>
@@ -14,7 +14,7 @@ export default function Home() {
           <Swipers />
         </div>
         <div className="flex gap-14">
-          <div className="grid grid-cols-2 gap-2.5">
+          <div className="grid grid-cols-2 gap-2.5 max-sm:overflow-x-scroll max-sm:flex">
             <div className="col-span-2">
               <AboutCard
                 desc="Наша вода проходит через двойной процесс очистки - обратный осмос и ультрафильтрация. Это означает, что каждая капля, 
