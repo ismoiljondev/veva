@@ -19,25 +19,41 @@ const MarketPage: React.FC = () => {
           <div className="flex flex-col gap-[30px]">
             <div className="flex border-[#98A2B3] border-b max-sm:flex-col">
               <button
-                className="px-[24px] py-[14px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
+                className={`px-[24px] py-[14px] ${
+                  item === 1
+                    ? "text-black bg-[#F2F4F7] font-bold backdrop-blur-none"
+                    : "text-[#98A2B3]"
+                } rounded-t-[10px]`}
                 onClick={() => setToggle(1)}
               >
                 Ваша корзина
               </button>
               <button
-                className="py-[14px] px-[24px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
+                className={`px-[24px] py-[14px] ${
+                  item === 2
+                    ? "text-black bg-[#F2F4F7] font-bold backdrop-blur-none"
+                    : "text-[#98A2B3]"
+                } rounded-t-[10px]`}
                 onClick={() => setToggle(2)}
               >
                 История заказов
               </button>
               <button
-                className="py-[14px] px-[24px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
+                className={`px-[24px] py-[14px] ${
+                  item === 3
+                    ? "text-black bg-[#F2F4F7] font-bold backdrop-blur-none"
+                    : "text-[#98A2B3]"
+                } rounded-t-[10px]`}
                 onClick={() => setToggle(3)}
               >
                 Личная
               </button>
               <button
-                className="py-[14px] px-[24px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
+                className={`px-[24px] py-[14px] ${
+                  item === 4
+                    ? "text-black bg-[#F2F4F7] font-bold backdrop-blur-none"
+                    : "text-[#98A2B3]"
+                } rounded-t-[10px]`}
                 onClick={() => setToggle(4)}
               >
                 Оповещения

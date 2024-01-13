@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="bg-[#E4EAF3] fixed w-full top-0 z-50">
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <header className="bg-[#E4EAF3] w-full">
           <Header />
         </header>
         <main>{children}</main>
-        <footer className="relative w-full bottom-0 bg-white  mt-6">
+        <footer className="w-full bg-white mt-auto">
           <Footer />
         </footer>
       </body>

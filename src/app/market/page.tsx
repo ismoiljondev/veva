@@ -13,24 +13,36 @@ const MarketPage: React.FC = () => {
   return (
     <>
       <Container>
-        <div className="flex flex-col gap-[30px] mt-40">
+        <div className="flex flex-col gap-[30px] flex-grow-1">
           <h1 className="text-3xl font-bold">Магазин товаров</h1>
           <div className="flex flex-col gap-[30px]">
             <div className="flex border-[#98A2B3] border-b max-sm:flex-col">
               <button
-                className="px-[24px] py-[14px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
+                className={`px-[24px] py-[14px] ${
+                  item === 1
+                    ? "text-black bg-[#F2F4F7] font-bold backdrop-blur-none"
+                    : "text-[#98A2B3]"
+                } rounded-t-[10px]`}
                 onClick={() => setToggle(1)}
               >
                 Home
               </button>
               <button
-                className="py-[14px] px-[24px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
+                className={`px-[24px] py-[14px] ${
+                  item === 2
+                    ? "text-black bg-[#F2F4F7] font-bold backdrop-blur-none"
+                    : "text-[#98A2B3]"
+                } rounded-t-[10px]`}
                 onClick={() => setToggle(2)}
               >
                 Pompa
               </button>
               <button
-                className="py-[14px] px-[24px] focus:bg-[#F2F4F7] rounded-t-[10px] focus:font-bold"
+                className={`px-[24px] py-[14px] ${
+                  item === 3
+                    ? "text-black bg-[#F2F4F7] font-bold backdrop-blur-none"
+                    : "text-[#98A2B3]"
+                } rounded-t-[10px]`}
                 onClick={() => setToggle(3)}
               >
                 Filter

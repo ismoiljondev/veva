@@ -4,10 +4,13 @@ import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import close from "@/images/close.svg";
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
+import Link from "next/link";
 type Inputs = {
   name: string;
   phone: string;
   adress: string;
+  login: string;
+  parol: string;
 };
 
 export default function Modal({ isVisible, onClose }: any) {
@@ -35,13 +38,19 @@ export default function Modal({ isVisible, onClose }: any) {
       <div className="flex flex-col w-[420px] m-auto max-sm:absolute max-sm:bottom-0 max-sm:w-full max-sm:rounded-b-none">
         <div className="flex border-[#98A2B3] max-sm:flex-col self-start">
           <button
-            className="px-[24px] py-[14px] bg-[rgba(255,255,255,0.30)] focus:text-[#1CBBEE] focus:bg-white rounded-t-[10px] focus:font-bold backdrop-blur-[20px]"
+            className={`px-[24px] py-[14px] bg-[rgba(255,255,255,0.30)]  ${
+              item === 1
+                ? "text-[#1CBBEE] bg-white font-bold backdrop-blur-none"
+                : "text-white"
+            } rounded-tr-none rounded-t-[10px] backdrop-blur-[20px]`}
             onClick={() => setToggle(1)}
           >
             Физ. лицо
           </button>
           <button
-            className="py-[14px] px-[24px] focus:text-[#1CBBEE] bg-[rgba(255,255,255,0.30)] focus:bg-white rounded-t-[10px] focus:font-bold backdrop-blur-[20px]"
+            className={`py-[14px] px-[24px] ${
+              item === 2 ? "text-[#1CBBEE] bg-white" : "text-white"
+            } rounded-tl-none bg-[rgba(255,255,255,0.30)] rounded-t-[10px] focus:font-bold backdrop-blur-[20px]`}
             onClick={() => setToggle(2)}
           >
             Pompa
@@ -118,29 +127,15 @@ export default function Modal({ isVisible, onClose }: any) {
           </button>
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col ">
             <div className="flex flex-col gap-[24px]">
-              <h2 className="font-bold text-3xl">Регистрация</h2>
+              <h2 className="font-bold text-3xl">Вход в личный кабинет</h2>
               <div className="flex flex-col gap-[15px]">
                 <input
                   placeholder="Ваша фамилия и имя"
-                  {...register("name")}
+                  {...register("login")}
                   className="rounded-[10px] bg-[#F2F4F7] py-[14px] px-[15px] text-[18px] text-[#98A2B3] font-light"
                 />
-
-                <Controller
-                  control={control}
-                  name="phone"
-                  defaultValue=""
-                  render={({ field }) => (
-                    <IMaskInput
-                      {...field}
-                      mask="00 000-00-00"
-                      placeholder="00 000-00-00"
-                      className="rounded-[10px] bg-[#F2F4F7] py-[14px] px-[15px] text-[18px] text-[#98A2B3] font-light"
-                    />
-                  )}
-                />
                 <input
-                  {...register("adress")}
+                  {...register("parol")}
                   className="rounded-[10px] bg-[#F2F4F7] py-[14px] px-[15px] text-[18px] text-[#98A2B3] font-light"
                   placeholder="Укажите адрес доставки"
                   data-mask
@@ -154,9 +149,22 @@ export default function Modal({ isVisible, onClose }: any) {
                 Я согласен на обработку персональных данных
               </label>
             </div>
-            <button className="bg-black text-white mt-[30px] p-[14px] rounded-full">
-              Submit
-            </button>
+            <div className="flex flex-col gap-5">
+              <button className="bg-black text-white mt-[30px] p-[14px] rounded-full w-full">
+                Submit
+              </button>
+
+              <Link
+                href={"/"}
+                className="text-lg text-[#98A2B3] flex items-center justify-center"
+              >
+                <span className="underline">Забыли пароль?</span> Восстановить.
+              </Link>
+              <p className="font-normal">
+                Для регистрации обратитесь к менеджеру по телефону:{" "}
+                <span className="font-bold">+998 55 519 90 90</span>
+              </p>
+            </div>
           </form>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Water from "@/components/water/water";
 export default function Home() {
   return (
     <Container>
-      <div className="flex flex-col gap-14 my-32 max-sm:gap-8 max-sm:mb-10">
+      <div className="flex flex-col gap-14 max-sm:gap-8 max-sm:mb-10">
         <div className="max-md:hidden">
           <Swiperx />
         </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import left from "@/images/left.png";
 import right from "@/images/right.png";
+import Link from "next/link";
 type cardProps = {
   image: any;
   text: string;
@@ -50,9 +51,11 @@ const Card: React.FC<cardProps> = ({
             </p>
           </div>
         </div>
-        <button className="hidden bg-[#000] rounded-full py-[12px] px-[16px] text-white group-hover:block">
-          Добавить в корзину
-        </button>
+        <Link href={"/user"}>
+          <button className="hidden bg-[#000] rounded-full py-[12px] px-[16px] text-white group-hover:block w-full">
+            Добавить в корзину
+          </button>
+        </Link>
       </div>
     </div>
   );
