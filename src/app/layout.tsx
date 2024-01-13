@@ -23,7 +23,7 @@ export default function RootLayout({
           <Header />
         </header>
         <main>{children}</main>
-        <footer className="sticky w-full bottom-0 bg-white  mt-6">
+        <footer className="relative w-full bottom-0 bg-white  mt-6">
           <Footer />
         </footer>
       </body>
