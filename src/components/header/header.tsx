@@ -6,6 +6,7 @@ import closeBtn from "@/images/closeBtn.svg";
 import Image from "next/image";
 import { useState } from "react";
 import Modal from "../modal/modal";
+import { usePathname } from "next/navigation";
 const links = [
   { link: "/", label: "Features" },
   { link: "/market", label: "Pricing" },
@@ -14,6 +15,7 @@ const links = [
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
   return (
     <Container>
       <div className="flex justify-between py-[20px] items-center max-2xl:py-[30px] max-md:py-[10px]">
@@ -53,7 +55,11 @@ const Header: React.FC = () => {
               <a
                 key={e?.label}
                 href={e?.link}
-                className="text-[#98A2B3] hover:underline hover:text-black focus:font-bold"
+                className={`text-[#98A2B3] ${
+                  pathname === e?.link
+                    ? "text-black underline font-bold"
+                    : "font-normal"
+                }`}
               >
                 {e?.label}
               </a>
