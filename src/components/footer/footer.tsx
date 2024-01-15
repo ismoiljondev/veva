@@ -45,9 +45,9 @@ const Footer: React.FC = () => {
             <div className="max-xl:hidden">
               <Logo />
             </div>
-            <div>
+            <div className="max-sm:text-[#98A2B3]">
               <p>VEVA © </p>
-              <p> Все права защищены. 2023</p>
+              <p>Все права защищены. 2023</p>
             </div>
             <div>
               <p className="underline">Договор оферты</p>
@@ -89,7 +89,9 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="text-right">Телефон:</p>
-              <h2 className="font-bold text-[18px]">+998 55 519 90 90</h2>
+              <h2 className="font-bold text-[18px] text-nowrap">
+                +998555199090
+              </h2>
             </div>
           </div>
         </div>
