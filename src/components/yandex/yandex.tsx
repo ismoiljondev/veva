@@ -76,7 +76,7 @@ const Yandex: React.FC = () => {
           onClick={handleMapClick}
         >
           <ZoomControl options={{ float: "right" }} />
-          {<Placemark geometry={markedLocation} />}
+          {markedLocation && <Placemark geometry={markedLocation} />}
           {currentLocation && <Placemark geometry={currentLocation} />}
         </Map>
       </YMaps>
