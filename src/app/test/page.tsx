@@ -1,12 +1,13 @@
 "use client";
 import Container from "@/components/container/container";
-import Yandex from "@/components/yandex/yandex";
+import YandexMap from "@/components/yadextest/yandextest";
+
 import React from "react";
 
 const Test: React.FC = () => {
   return (
     <Container>
-      <Yandex />
+      <YandexMap coordinates={[41, 69]} />
     </Container>
   );
 };
