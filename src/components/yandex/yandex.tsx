@@ -101,7 +101,10 @@ const Yandex: React.FC<{
               </p>
             </div>
             <Map
-              defaultState={{ center: [41.311081, 69.240562], zoom: 12 }}
+              defaultState={{
+                center: currentLocation ?? [41.311081, 69.240562],
+                zoom: 12,
+              }}
               width="100%"
               height="400px"
               onClick={handleMapClick}
