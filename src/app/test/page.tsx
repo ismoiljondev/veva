@@ -1,6 +1,6 @@
 "use client";
+import Swipertest from "@/components/carousel/carousel";
 import Container from "@/components/container/container";
-import Swipertest from "@/components/swipertest/swipertest";
 
 import React from "react";
 
