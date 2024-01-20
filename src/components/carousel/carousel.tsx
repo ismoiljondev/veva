@@ -17,12 +17,13 @@ export default function App() {
         centeredSlides={true}
         slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 1,
+          modifier: 2,
           slideShadows: true,
         }}
+        loop={true}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
@@ -35,24 +36,6 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
         </SwiperSlide>
       </Swiper>
     </>
