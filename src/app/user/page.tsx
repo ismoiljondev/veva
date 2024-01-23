@@ -70,38 +70,40 @@ const MarketPage: React.FC = () => {
                 <div className="flex flex-col gap-12 w-full">
                   <h1 className="text-3xl font-bold">Личная информация</h1>
                   <table className="w-full">
-                    <tr className="odd:bg-[#F2F4F7] rounded">
-                      <td className="text-lg even:font-bold py-5 px-2.5">
-                        Фамилия и имя:
-                      </td>
-                      <td className="text-lg even:font-bold py-5 px-2.5">
-                        Никифоров Михаил
-                      </td>
-                    </tr>
-                    <tr className="odd:bg-[#F2F4F7] rounded">
-                      <td className="text-lg even:font-bold py-5 px-2.5">
-                        Номер телефона:
-                      </td>
-                      <td className="text-lg even:font-bold py-5 px-2.5">
-                        + 998 90 124-25-25 + 998 90 124-25-25
-                      </td>
-                    </tr>
-                    <tr className="odd:bg-[#F2F4F7] rounded">
-                      <td className="text-lg even:font-bold py-5 px-2.5">
-                        Ваш адрес №1:
-                      </td>
-                      <td className=" text-lg even:font-bold py-5 px-2.5">
-                        г. Ташкент, улица Мукими, 166 ...
-                      </td>
-                    </tr>
-                    <tr className="odd:bg-[#F2F4F7] rounded">
-                      <td className="text-lg even:font-bold py-5 px-2.5">
-                        Ваш адрес №2:
-                      </td>
-                      <td className="text-lg even:font-bold py-5 px-2.5">
-                        г. Ташкент, улица Арнасай, 2 ...
-                      </td>
-                    </tr>
+                    <tbody>
+                      <tr className="odd:bg-[#F2F4F7] rounded">
+                        <td className="text-lg even:font-bold py-5 px-2.5">
+                          Фамилия и имя:
+                        </td>
+                        <td className="text-lg even:font-bold py-5 px-2.5">
+                          Никифоров Михаил
+                        </td>
+                      </tr>
+                      <tr className="odd:bg-[#F2F4F7] rounded">
+                        <td className="text-lg even:font-bold py-5 px-2.5">
+                          Номер телефона:
+                        </td>
+                        <td className="text-lg even:font-bold py-5 px-2.5">
+                          + 998 90 124-25-25 + 998 90 124-25-25
+                        </td>
+                      </tr>
+                      <tr className="odd:bg-[#F2F4F7] rounded">
+                        <td className="text-lg even:font-bold py-5 px-2.5">
+                          Ваш адрес №1:
+                        </td>
+                        <td className=" text-lg even:font-bold py-5 px-2.5">
+                          г. Ташкент, улица Мукими, 166 ...
+                        </td>
+                      </tr>
+                      <tr className="odd:bg-[#F2F4F7] rounded">
+                        <td className="text-lg even:font-bold py-5 px-2.5">
+                          Ваш адрес №2:
+                        </td>
+                        <td className="text-lg even:font-bold py-5 px-2.5">
+                          г. Ташкент, улица Арнасай, 2 ...
+                        </td>
+                      </tr>
+                    </tbody>
                   </table>
                   <div className="flex items-center gap-2.5 px-9 py-3 rounded-full w-max bg-[#F2F4F7]">
                     <Image src={save} alt="save" />
