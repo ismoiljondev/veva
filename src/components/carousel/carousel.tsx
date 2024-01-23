@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "./style.css";
+import "./style.modules.scss";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import React from "react";
 import layer from "@/images/layer.png";
@@ -34,8 +34,8 @@ const SwiperTest: React.FC = (children: any) => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <Image src={layer} alt="layer" />
+          <div className="w-full h-full">
+            <Image src={layer} alt="layer" className="w-full h-full" />
           </div>
         </SwiperSlide>
 

@@ -5,6 +5,10 @@
 }
 
 .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-position: center;
   background-size: cover;
   width: 300px;
@@ -16,7 +20,13 @@
 .swiper-slide img {
   display: block;
   width: 100%;
+  height: 100%;
 }
 .swiper-slide-active {
   opacity: 1;
+}
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  transform: scale(0.1);
+  background-image: none;
 }
