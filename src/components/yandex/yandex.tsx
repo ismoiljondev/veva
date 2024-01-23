@@ -43,7 +43,7 @@ const Yandex: React.FC<{
         params: {
           format: "json",
           geocode: `${clickedLocation[1]},${clickedLocation[0]}`, // Yandex expects longitude,latitude
-          apikey: "c08f1c38-efd8-448a-aad5-3ce83b4561b3",
+          apikey: process.env.API_KEY,
         },
       });
 

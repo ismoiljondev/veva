@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         </div>
         <input type="checkbox" className="hidden" id="menu" />
         <div
-          className={`flex gap-[40px] duration-700 max-lg:fixed max-lg:bg-white max-lg:w-[60%] max-lg:left-0 max-lg:top-0 max-lg:h-[100%] max-lg:py-[40px] max-lg:px-[15px] ${
+          className={`flex gap-[40px] duration-700 max-lg:fixed max-lg:bg-white max-lg:w-[60%] max-lg:left-0 z-50 max-lg:top-0 max-lg:h-[100%] max-lg:py-[40px] max-lg:px-[15px] ${
             !open ? "max-lg:translate-x-[-100%]" : "max-lg:translate-x-0"
           }`}
         >

@@ -1,15 +1,10 @@
 "use client";
-import Swipertest from "@/components/carousel/carousel";
+import SwiperTest from "@/components/carousel/carousel";
 import Container from "@/components/container/container";
-
-import React from "react";
+import { SwiperSlide } from "swiper/react";
 
 const Test: React.FC = () => {
-  return (
-    <Container>
-      <Swipertest />
-    </Container>
-  );
+  return <Container>snwns</Container>;
 };
 
 export default Test;

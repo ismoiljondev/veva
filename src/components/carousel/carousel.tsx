@@ -1,14 +1,14 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 
 import "./style.css";
 
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import React, { ReactNode } from "react";
 
-export default function App() {
+export default function SwiperTest(children: any) {
   return (
     <>
       <Swiper
@@ -16,27 +16,23 @@ export default function App() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
+        spaceBetween={200}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: true,
+          depth: 80,
+          modifier: 2.5,
+          slideShadows: false,
         }}
         loop={true}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+        modules={[EffectCoverflow, Navigation, Pagination]}
+        className="mySwiper flex justify-between"
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
+        {children}
       </Swiper>
     </>
   );
