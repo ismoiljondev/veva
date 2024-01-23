@@ -11,25 +11,29 @@ const VevaWater: React.FC = () => {
     <div>
       <div className="flex">
         <div className="relative">
-          <Image src={water} alt="water" />
-          <Image
-            src={plus}
-            alt="close"
-            onClick={() => setOpen(true)}
+          <div>
+            <Image src={water} alt="water" />
+          </div>
+          <div
             className={`absolute top-28 -right-8 cursor-pointer ${
               !open ? "block" : "hidden"
             }`}
-          />
-          <Image
-            src={cbtn}
-            alt="close"
-            onClick={() => setOpen(false)}
+          >
+            <Image src={plus} alt="close" onClick={() => setOpen(true)} />
+          </div>
+          <div
             className={`absolute top-28 -right-8 cursor-pointer ${
               open ? "block" : "hidden"
             }`}
-          />
+          >
+            <Image src={cbtn} alt="close" onClick={() => setOpen(false)} />
+          </div>
         </div>
-        <div className={`-translate-x-20 -z-20 ${open ? "block" : "hidden"}`}>
+        <div
+          className={`-translate-x-20 -z-20 absolute left-72 ${
+            open ? "flex" : "hidden"
+          }`}
+        >
           <Info />
         </div>
       </div>

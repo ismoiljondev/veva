@@ -1,14 +1,14 @@
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-
 import "./style.css";
-
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
-import React, { ReactNode } from "react";
-
-export default function SwiperTest(children: any) {
+import React from "react";
+import layer from "@/images/layer.png";
+import VevaWater from "@/components/vevaWater/VevaWater";
+import pompa from "@/images/pompa.png";
+import Image from "next/image";
+const SwiperTest: React.FC = (children: any) => {
   return (
     <>
       <Swiper
@@ -16,24 +16,37 @@ export default function SwiperTest(children: any) {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
-        spaceBetween={200}
+        spaceBetween={500}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
           depth: 80,
-          modifier: 2.5,
+          modifier: 2,
           slideShadows: false,
         }}
         loop={true}
         modules={[EffectCoverflow, Navigation, Pagination]}
         className="mySwiper flex justify-between"
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
       >
-        {children}
+        <SwiperSlide>
+          <div className="w-auto">
+            <VevaWater />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            <Image src={layer} alt="layer" />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div>
+            <Image src={pompa} alt="pompa" className="w-[300px] h-full" />
+          </div>
+        </SwiperSlide>
       </Swiper>
     </>
   );
-}
+};
+
+export default SwiperTest;

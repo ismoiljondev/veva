@@ -1,3 +1,4 @@
+"use client";
 import AboutCard from "@/components/about/about";
 import SwiperTest from "@/components/carousel/carousel";
 import Container from "@/components/container/container";
@@ -6,13 +7,14 @@ import Swiperx from "@/components/swiperhome/swiper";
 import Water from "@/components/water/water";
 import showcase from "@/images/showcase.svg";
 import Image from "next/image";
+
 export default function Home() {
   return (
     <>
-      <div className=" w-full">
-        {/* <SwiperTest>
-          <SwiperTest></SwiperTest>
-        </SwiperTest> */}
+      <div className="w-full relative">
+        <div className="absolute w-full">
+          <SwiperTest />
+        </div>
         <Image src={showcase} alt="showcase" className="w-full bg-[#E4EAF3] " />
       </div>
       <Container>
