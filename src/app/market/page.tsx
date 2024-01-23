@@ -4,6 +4,7 @@ import Container from "@/components/container/container";
 import React, { useState } from "react";
 import water from "@/images/water.svg";
 import Info from "@/components/info/info";
+import VevaWater from "@/components/vevaWater/VevaWater";
 const MarketPage: React.FC = () => {
   const [item, setItem] = useState(1);
 
@@ -58,7 +59,7 @@ const MarketPage: React.FC = () => {
               />
             </div>
             <div className={item === 2 ? "block" : "hidden"}>
-              <Info />
+              <VevaWater />
             </div>
             <div className={item === 3 ? "block" : "hidden"}>item3</div>
           </div>

@@ -118,7 +118,7 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
-      <Yandex isShow={map} onClose={() => setMap(false)} />
+      {/* <Yandex isShow={map} onClose={() => setMap(false)} /> */}
       <Modal isVisible={show} onClose={() => setShow(false)} />
     </Container>
   );

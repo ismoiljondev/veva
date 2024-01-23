@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <>
       <div className=" w-full">
-        <SwiperTest>
+        {/* <SwiperTest>
           <SwiperTest></SwiperTest>
-        </SwiperTest>
+        </SwiperTest> */}
         <Image src={showcase} alt="showcase" className="w-full bg-[#E4EAF3] " />
       </div>
       <Container>
