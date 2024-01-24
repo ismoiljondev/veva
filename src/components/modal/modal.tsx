@@ -5,6 +5,7 @@ import close from "@/images/close.svg";
 import { IMaskInput } from "react-imask";
 import { useState } from "react";
 import Link from "next/link";
+import Button from "../button/button";
 type Inputs = {
   name: string;
   phone: string;
@@ -107,9 +108,11 @@ export default function Modal({ isVisible, onClose }: any) {
                 Я согласен на обработку персональных данных
               </label>
             </div>
-            <button className="bg-black text-white mt-[30px] p-[14px] rounded-full">
-              Submit
-            </button>
+            <div className="mt-7">
+              <Button bgcolor="black" color="white">
+                Зарегистрироваться
+              </Button>
+            </div>
           </form>
         </div>
         <div
@@ -150,15 +153,17 @@ export default function Modal({ isVisible, onClose }: any) {
               </label>
             </div>
             <div className="flex flex-col gap-5">
-              <button className="bg-black text-white mt-[30px] p-[14px] rounded-full w-full">
-                Submit
-              </button>
+              <div className="w-full mt-7">
+                <Button color="white" bgcolor="black">
+                  Войти в кабинет
+                </Button>
+              </div>
 
               <Link
                 href={"/"}
                 className="text-lg text-[#98A2B3] flex items-center justify-center"
               >
-                <span className="underline">Забыли пароль?</span> Восстановить.
+                <span className="underline">Забыли пароль? </span>Восстановить.
               </Link>
               <p className="font-normal">
                 Для регистрации обратитесь к менеджеру по телефону:{" "}

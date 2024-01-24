@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import close from "@/images/close.svg";
+import Button from "../button/button";
 export default function InfoModal({ isVisible, onClose }: any) {
   const handleClose = (e: any) => {
     if (e.target.id === "wrapper") onClose();
@@ -47,9 +48,11 @@ export default function InfoModal({ isVisible, onClose }: any) {
               Российской Федерации об обеспечении единства измерений.
             </p>
           </div>
-          <button className="bg-black text-white mt-[30px] p-[14px] rounded-full">
-            Submit
-          </button>
+          <div className="w-full mt-7">
+            <Button color="white" bgcolor="black">
+              Войти в кабинет
+            </Button>
+          </div>
         </div>
       </div>
     </div>

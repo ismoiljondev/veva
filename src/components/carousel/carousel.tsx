@@ -60,7 +60,7 @@ const SwiperTest: React.FC = () => {
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 80,
+          depth: 100,
           modifier: 2,
           slideShadows: false,
         }}
@@ -68,16 +68,6 @@ const SwiperTest: React.FC = () => {
         modules={[EffectCoverflow, Navigation, Pagination]}
         className="mySwiper flex justify-between"
       >
-        <SwiperSlide className="customclass">
-          <div className="flex flex-col">
-            <div className="w-auto">
-              <VevaWater />
-            </div>
-            <Button bgcolor="black" color="white">
-              Заказать воду
-            </Button>
-          </div>
-        </SwiperSlide>
         <SwiperSlide className="customclass w-11/12">
           <div className="mt-32 flex flex-col gap-4">
             <div className="h-3/4">
@@ -89,13 +79,25 @@ const SwiperTest: React.FC = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="customclass">
-          <div className="flex flex-col gap-1">
-            <div>
-              <Image src={pompa} alt="pompa" className="w-[300px] h-full" />
+          <div className="flex flex-col">
+            <div className="w-auto">
+              <VevaWater />
             </div>
             <Button bgcolor="black" color="white">
               Заказать воду
             </Button>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="customclass">
+          <div className="flex flex-col gap-1 items-center">
+            <div>
+              <Image src={pompa} alt="pompa" className="w-[300px] h-full" />
+            </div>
+            <div>
+              <Button auto="auto" bgcolor="black" color="white">
+                Заказать воду
+              </Button>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>

@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useState } from "react";
 import Modal from "../modal/modal";
 import { usePathname } from "next/navigation";
-import Yandex from "../yandex/yandex";
 const links = [
   { link: "/", label: "Главная" },
   { link: "/market", label: "Магазин товаров" },
