@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import left from "@/images/left.png";
 import right from "@/images/right.png";
 import Link from "next/link";
+import Button from "../button/button";
 type cardProps = {
   image: any;
   text: string;
@@ -52,9 +53,14 @@ const Card: React.FC<cardProps> = ({
           </div>
         </div>
         <Link href={"/user"}>
-          <button className="hidden bg-[#000] rounded-full py-[12px] px-[16px] text-white group-hover:block w-full">
-            Добавить в корзину
-          </button>
+          <div className="group-hover:block hidden">
+            {/* <button className="bg-[#000] rounded-full py-[12px] px-[16px] text-white  w-full">
+              Добавить в корзину
+            </button> */}
+            <Button bgcolor="black" color="white" key={1}>
+              Добавить в корзину
+            </Button>
+          </div>
         </Link>
       </div>
     </div>

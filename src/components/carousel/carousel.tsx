@@ -7,6 +7,7 @@ import layer from "@/images/layer.png";
 import VevaWater from "@/components/vevaWater/VevaWater";
 import pompa from "@/images/pompa.png";
 import Image from "next/image";
+import Button from "../button/button";
 const SwiperTest: React.FC = () => {
   const css = `
   .swiper {
@@ -28,7 +29,7 @@ const SwiperTest: React.FC = () => {
   background: none;
 }
 
-.swiper-slide img {
+.customclass img {
   display: block;
   width: 100%;
   height: 100%;
@@ -36,9 +37,13 @@ const SwiperTest: React.FC = () => {
 .swiper-slide-active {
   opacity: 1;
 }
+.swiper-slide-active img{
+  width:100%
+  heigth:100%
+}
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
-  transform: scale(0.1);
+
   background-image: none;
 }
 
@@ -64,19 +69,33 @@ const SwiperTest: React.FC = () => {
         className="mySwiper flex justify-between"
       >
         <SwiperSlide className="customclass">
-          <div className="w-auto">
-            <VevaWater />
+          <div className="flex flex-col">
+            <div className="w-auto">
+              <VevaWater />
+            </div>
+            <Button bgcolor="black" color="white">
+              Заказать воду
+            </Button>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="customclass w-11/12">
+          <div className="mt-32 flex flex-col gap-4">
+            <div className="h-3/4">
+              <Image src={layer} alt="layer" width={150} height={100} />
+            </div>
+            <Button bgcolor="black" color="white">
+              Заказать воду
+            </Button>
           </div>
         </SwiperSlide>
         <SwiperSlide className="customclass">
-          <div className="w-full h-full">
-            <Image src={layer} alt="layer" className="w-full h-full" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="customclass">
-          <div>
-            <Image src={pompa} alt="pompa" className="w-[300px] h-full" />
+          <div className="flex flex-col gap-1">
+            <div>
+              <Image src={pompa} alt="pompa" className="w-[300px] h-full" />
+            </div>
+            <Button bgcolor="black" color="white">
+              Заказать воду
+            </Button>
           </div>
         </SwiperSlide>
       </Swiper>
