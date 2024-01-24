@@ -6,8 +6,10 @@ import Table from "@/components/table/table";
 import Swipers from "@/components/swiper/swiper";
 import Image from "next/image";
 import save from "@/images/save.svg";
+import EditModal from "@/components/editModal/editModal";
 const MarketPage: React.FC = () => {
   const [item, setItem] = useState(1);
+  const [show, setShow] = useState(false);
   function setToggle(id: number) {
     setItem(id);
   }
@@ -105,10 +107,14 @@ const MarketPage: React.FC = () => {
                       </tr>
                     </tbody>
                   </table>
-                  <div className="flex items-center gap-2.5 px-9 py-3 rounded-full w-max bg-[#F2F4F7]">
+                  <button
+                    className="flex items-center gap-2.5 px-9 py-3 rounded-full w-max 
+                    bg-[#F2F4F7]"
+                    onClick={() => setShow(true)}
+                  >
                     <Image src={save} alt="save" />
                     <p className="text-lg font-bold">Редактировать</p>
-                  </div>
+                  </button>
                 </div>
                 <div className="w-[450px] max-sm:w-[400px] max-[450px]:w-[350px] max-[380px]:w-[320px]">
                   <Swipers />
@@ -120,6 +126,7 @@ const MarketPage: React.FC = () => {
             </div>
           </div>
         </div>
+        <EditModal isVisible={show} onClose={() => setShow(false)} />
       </Container>
     </>
   );
